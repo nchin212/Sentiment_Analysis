@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>sentiment_analysis</title>
+<title>sentiment</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13107,21 +13107,75 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The data contains a collection of video game reviews written in the Amazon.com marketplace and associated metadata from 1995 until 2015 and can be downloaded <a href="https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Video_Games_v1_00.tsv.gz">here</a>. It contains the following columns:</p>
-<p><strong>marketplace</strong> - 2 letter country code of the marketplace where the review was written.</p>
-<p><strong>customer_id</strong> - Random identifier that can be used to aggregate reviews written by a single author.</p>
-<p><strong>review_id</strong> - The unique ID of the review.</p>
-<p><strong>product_id</strong> - The unique Product ID the review pertains to.</p>
-<p><strong>product_parent</strong> - Random identifier that can be used to aggregate reviews for the same product.</p>
-<p><strong>product_title</strong>  - Title of the product.</p>
-<p><strong>product_category</strong>  - Broad product category that can be used to group reviews (also used to group the dataset into coherent parts).</p>
-<p><strong>star_rating</strong>  - The 1-5 star rating of the review.</p>
-<p><strong>helpful_votes</strong> - Number of helpful votes.</p>
-<p><strong>total_votes</strong>  - Number of total votes the review received.</p>
-<p><strong>vine</strong> - Review was written as part of the Vine program.</p>
-<p><strong>verified_purchase</strong> - The review is on a verified purchase.</p>
-<p><strong>review_headline</strong> - The title of the review.</p>
-<p><strong>review_body</strong> - The review text.</p>
-<p><strong>review_date</strong> - The date the review was written.</p>
+<table>
+<thead><tr>
+<th>Variable</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>marketplace</td>
+<td style="text-align:left">2 letter country code of the marketplace where the review was written.</td>
+</tr>
+<tr>
+<td>customer_id</td>
+<td style="text-align:left">Random identifier that can be used to aggregate reviews written by a single author.</td>
+</tr>
+<tr>
+<td>review_id</td>
+<td style="text-align:left">The unique ID of the review.</td>
+</tr>
+<tr>
+<td>product_id</td>
+<td style="text-align:left">The unique Product ID the review pertains to.</td>
+</tr>
+<tr>
+<td>product_parent</td>
+<td style="text-align:left">Random identifier that can be used to aggregate reviews for the same product.</td>
+</tr>
+<tr>
+<td>product_title</td>
+<td style="text-align:left">Title of the product.</td>
+</tr>
+<tr>
+<td>product_category</td>
+<td style="text-align:left">Broad product category that can be used to group reviews (also used to group the dataset into coherent parts).</td>
+</tr>
+<tr>
+<td>star_rating</td>
+<td style="text-align:left">The 1-5 star rating of the review.</td>
+</tr>
+<tr>
+<td>helpful_votes</td>
+<td style="text-align:left">Number of helpful votes.</td>
+</tr>
+<tr>
+<td>total_votes</td>
+<td style="text-align:left">Number of total votes the review received.</td>
+</tr>
+<tr>
+<td>vine</td>
+<td style="text-align:left">Review was written as part of the Vine program.</td>
+</tr>
+<tr>
+<td>verified_purchase</td>
+<td style="text-align:left">The review is on a verified purchase.</td>
+</tr>
+<tr>
+<td>review_headline</td>
+<td style="text-align:left">The title of the review.</td>
+</tr>
+<tr>
+<td>review_body</td>
+<td style="text-align:left">The review text.</td>
+</tr>
+<tr>
+<td>review_date</td>
+<td style="text-align:left">The date the review was written.</td>
+</tr>
+</tbody>
+</table>
 
 </div>
 </div>
@@ -14479,7 +14533,7 @@ Name: review_body, dtype: object</pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Naive Bayes is a classification technique based on Bayes’ Theorem with an assumption of independence among predictors. It calculates the probabilities as follows:</p>
-<p><img src="bayes.png" alt="png"></p>
+<p><img src="plots/bayes.png" alt="png"></p>
 <p>where y is the class variable and X refers to the features.</p>
 
 </div>
